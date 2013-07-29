@@ -192,7 +192,7 @@ public class JarJarMojo
 
             for ( final Artifact a : (Set<Artifact>) project.getArtifacts() )
             {
-                if ( filter.include( a ) )
+                if ( filter.include( a ) && !"provided".equals(a.getScope()))
                 {
                     try
                     {
